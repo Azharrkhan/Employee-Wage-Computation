@@ -1,0 +1,13 @@
+#employee attendance
+read -p "enter a number : "
+present=$((RANDOM%2))
+case $present in
+0)
+echo "employee is absent"
+;;
+1)
+echo "employee is present"
+;;
+*)
+echo "NA"
+esac
