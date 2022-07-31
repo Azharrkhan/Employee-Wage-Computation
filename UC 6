@@ -1,0 +1,32 @@
+perHoursalary=20
+workingHour=0
+totalSalary=0
+totalWorkingHour=0
+while [ $totalWorkingHour -lt 100 ]
+do
+present=$((RANDOM%3))
+read -p "check employee presence : " present
+case $present in
+     0)
+     echo "employee is absent"
+     workingHour=0
+     ;;
+     1)
+     echo "employee is present"
+     workingHour=8
+     ;;
+     2)
+     echo "employee work part time"
+     workingHour=8
+     ;;
+esac
+if [ $totalWorkingHour -lt 100 ]
+then
+totalWorkingHour=$(($totalWorkingHour+$workingHour))
+fi
+salary=$(($totalWorkingHour*$workingHour))
+totalSalary=$(($totalSalary+$salary))
+((totalWorkingHour++));
+done
+echo "Employee has earned $totalSalary $ in a month"
+
