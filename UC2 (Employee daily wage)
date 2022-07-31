@@ -1,0 +1,10 @@
+#Employee daily wage
+WageperHour=20
+DayHour=8
+wage=$(($WageperHour*$DayHour))
+echo "$wage"
+
+
+Output:
+$ bash daily.sh
+160
