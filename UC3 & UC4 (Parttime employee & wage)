@@ -1,0 +1,23 @@
+#parttime employee & wage
+WageperHour=20
+ParttimeHour=8
+wage=$(($WageperHour*ParttimeHour))
+read -p "enter a number : " n
+case $n in
+1)
+echo "$wage"
+;;
+*)
+echo "NA"
+;;
+esac
+
+
+Output:
+$ bash employeewage.sh
+enter a number : 1
+160
+
+$ bash employeewage.sh
+enter a number : 0
+NA
