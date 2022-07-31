@@ -1,4 +1,5 @@
 perHoursalary=20
+workDays=20
 workingHour=0
 totalSalary=0
 present=$((RANDOM%3))
@@ -18,24 +19,26 @@ case $present in
      ;;
 esac
 salary=$(($perHoursalary*$workingHour))
-totalSalary=$(($totalSalary+$salary))
-echo "employee is earned $totalSalary in a month"
+totalSalary=$(($workDays*$salary))
+echo "Employee has earned $totalSalary in a month"
 
 Output:
+Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
 $ bash monthsalary.sh
 check employee presence : 0
 employee is absent
-employee is earned 0 in a month
+Employee has earned 0 in a month
 
 Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
 $ bash monthsalary.sh
 check employee presence : 1
 employee is present
-employee is earned 160 in a month
+Employee has earned 3200 in a month
 
 Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
 $ bash monthsalary.sh
 check employee presence : 2
 employee work part time
-employee is earned 160 in a month
+Employee has earned 3200 in a month
+
 
