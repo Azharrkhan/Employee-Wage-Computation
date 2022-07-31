@@ -1,1 +1,41 @@
+perHoursalary=20
+workingHour=0
+totalSalary=0
+present=$((RANDOM%3))
+read -p "check employee presence : " present
+case $present in
+     0)
+     echo "employee is absent"
+     workingHour=0
+     ;;
+     1)
+     echo "employee is present"
+     workingHour=8
+     ;;
+     2)
+     echo "employee work part time"
+     workingHour=8
+     ;;
+esac
+salary=$(($perHoursalary*$workingHour))
+totalSalary=$(($totalSalary+$salary))
+echo "employee is earned $totalSalary in a month"
+
+Output:
+$ bash monthsalary.sh
+check employee presence : 0
+employee is absent
+employee is earned 0 in a month
+
+Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
+$ bash monthsalary.sh
+check employee presence : 1
+employee is present
+employee is earned 160 in a month
+
+Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
+$ bash monthsalary.sh
+check employee presence : 2
+employee work part time
+employee is earned 160 in a month
 
