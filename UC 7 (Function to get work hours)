@@ -1,0 +1,12 @@
+function workHours () {
+workDays=20
+dailyworkHours=8
+workHours=$(($workDays*$dailyworkHours))
+echo "$workHours"
+}
+workHours
+
+Output:
+Lenovo@DESKTOP-CS2AKAV MINGW64 /e/bridge lab/assignment/Assignment
+$ bash function.sh
+160
